@@ -6,7 +6,7 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
     <link href="style.css" rel="stylesheet">
-    <title>Make-An-Audio: Text-To-Audio Generation with Prompt-Enhanced Diffusion Models</title>
+    <title>Audio4Video: Video-To-Audio(SFX, BGM) Generation with Open Source Models</title>
     </head>
     <body>
 
@@ -16,8 +16,9 @@
                 <img src="meta_logo.png" height="95">
                 <img src="huji_logo.png" height="95">
             </div>-->
-                <h1>Make-An-Audio: Text-To-Audio Generation with Prompt-Enhanced Diffusion Models</h1>
-                                <div class="authors">
+                <h1>Audio4Video: Video-To-Audio(SFX, BGM) Generation with Open Source Models</h1>
+<!--                 作者暂不需要 -->
+<!--                                 <div class="authors">
                    <a href="https://rongjiehuang.github.io">Rongjie Huang*</a><sup>1</sup>,
                     <a href="">Jiawei Huang*</a><sup>1</sup>,
                     <a href="http://dongchaoyang.top">Dongchao Yang*</a><sup>2</sup>,
@@ -28,27 +29,40 @@
                     <a href="https://silentlin15.github.io/">Jinglin Liu</a><sup>1</sup>,
                     <a href="">Xiang Yin</a><sup>3</sup>,
                     <a href="https://scholar.google.com/citations?user=IIoFY90AAAAJ">Zhou Zhao</a><sup>1</sup>,
-                </div>
+                </div> -->
 
+<!--                 组织机构 -->
                 <br>
-                <p><sup>1</sup>Zhejiang University <sup>2</sup>Peking University <sup>3</sup>Speech & Audio Team, ByteDance AI Lab</p>
+                <p><sup>1</sup>Bejing Jiaotong University <sup>2</sup>XXX <sup>3</sup>XXX</p>
                 <p><sup>*</sup>Equal Contribution</p>
-
+<!--  论文链接-->
                  <div class="assets">
                     <a href="paper.pdf" target="_blank">[paper]</a><a href="https://github.com/Text-to-Audio/Make-An-Audio" target="_blank">[github]</a>
                 </div>
                 
         </div>
-
+<!--  摘要-->
     <div class="container">
         <h2>Abstract</h2>
         <span>
-            Large-scale multimodal generative modeling has created milestones in text-to-image and text-to-video generation. Its application to audio still lags behind due to two main reasons: the lack of large-scale datasets with high-quality text-audio pairs, and the complexity of modeling long continuous audio data. In this work, we propose Make-An-Audio with a prompt-enhanced diffusion model that addresses these gaps by 1) introducing pseudo prompt enhancement with a distill-then-reprogram approach which alleviates the data scarcity by using weekly-supervised data with language-free audios; 2) leveraging spectrogram autoencoder to predict the self-supervised audio representation instead of waveforms. Together with robust contrastive language-audio pretraining (CLAP) representations, Make-An-Audio achieves state-of-the-art results in both objective and subjective evaluation. Moreover, we present its controllability with classifier-free guidance and generalization for X-to-Audio with "No Modality Left Behind", for the first time unlocking the ability to generate high-definition, high-fidelity audios given a user-defined modality input.
+            Audio4Video is a work that accompany Silent Short Video with proper and high-quality SFXs and BGM by multi-modal large language model and open-source audio and music generation works.
         </span>
     </div>
-
+<!--  Samples-->
     <div class="container">
         <h2>Samples</h2>
+        <div class="text-center">
+            <video width="80%" controls="">
+                <source src="./show.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="text-center">
+            <video width="80%" controls="">
+                <source src="./show.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
         <div class="text-center">
             <video width="80%" controls="">
                 <source src="./show.mp4" type="video/mp4">
