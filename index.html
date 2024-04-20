@@ -25,42 +25,58 @@
             </div>-->
                 <h1>Semantically consistent Video-to-Audio Generation using Multimodal Language Large Model</h1>
 <!--                 作者 -->
-                                <div class="authors">
-                   <a href="https://rongjiehuang.github.io">XXX*</a><sup>1</sup>,
-                    <a href="">XXX*</a><sup>1</sup>,
-                    <a href="http://dongchaoyang.top">XXX*</a><sup>2</sup>,
-                    <a href="https://rayeren.github.io/">XXX</a><sup>3</sup>,
-<!--                    <a href="https://luping-liu.github.io/">Luping liu</a><sup>1</sup>,
-                    <a href="">Mingze Li</a><sup>1</sup>,
-                    <a href="https://yerfor.github.io/en/">Zhenhui Ye</a><sup>1</sup>,
-                    <a href="https://silentlin15.github.io/">Jinglin Liu</a><sup>1</sup>,
-                    <a href="">Xiang Yin</a><sup>3</sup>,
-                    <a href="https://scholar.google.com/citations?user=IIoFY90AAAAJ">Zhou Zhao</a><sup>1</sup>, -->
+                <br>
+                <div class="authors">
+                   <a>Gehui Chen</a><sup>1  &dagger;</sup>,
+                    <a href="https://wangguanan.github.io/">Guan'an Wang</a><sup>&dagger; *</sup>,
+                    <a href="https://faculty.bjtu.edu.cn/9545/">Xiaowen Huang</a><sup>1, 2, 3 &ddagger;</sup>,
+                    <a href="https://faculty.bjtu.edu.cn/9129/">Jitao Sang</a><sup>1, 2, 3</sup>,               
                 </div>
 
 <!--                 组织机构 -->
                 <br>
-                <p><sup>1</sup>Bejing Jiaotong University <sup>2</sup>XXX <sup>3</sup>XXX</p>
-                <p><sup>*</sup>Equal Contribution</p>
-<!--  论文和仓库链接-->
-                 <div class="assets">
-                    <a href="paper.pdf" target="_blank">[paper]</a><a href="https://github.com/Text-to-Audio/Make-An-Audio" target="_blank">[github]</a>
-                </div>
+                <p><sup>1</sup>School of Computer Science and Technology, Beijing Jiaotong University</p>
+                <p><sup>2</sup>Beijing Key Lab of Traffic Data Analysis and Mining, Beijing Jiaotong University</p>
+                <p><sup>3</sup>Key Laboratory of Big Data Artificial Intelligence in Transportation(Beijing Jiaotong University), Ministry of Education</p>
+                <br>
+                <p style="margin-right: 50px; display: inline-block;"><sup>&dagger;</sup>Equal Contribution</p>
+                <p style="margin-right: 50px; display: inline-block;"><sup>*</sup>Project Leader</p>
+                <p style="display: inline-block;"><sup>&ddagger;</sup>Corresponding Author</p>
                 
+<!--  论文和仓库链接-->
+                <br>
+                <div class="assets">
+                    <a href="paper.pdf" target="_blank" style="margin-right: 50px;">[paper]</a>
+                    <a href="https://github.com/Text-to-Audio/Make-An-Audio" target="_blank">[github]</a>
+                </div>        
         </div>
 <!--  摘要-->
     <div class="container">
         <h2>Abstract</h2>
         <span>
             Existing works have made strides in video generation, 
-            but the lack of sound effects(SFX) and background music(BGM) hinders a complete and immersive viewer experience. 
+            but the lack of sound effects (SFX) and background music (BGM) hinders a complete and immersive viewer experience. 
             We introduce a novel semantically consistent video-to-audio generation framework, namely SVA, 
             which automates the process of generating audio semantically consistent with the given video content. 
-            The framework harnesses the power of multimodal large language model(MLLM) to understand video semantics from a key frame and generate creative audio schemes, 
+            The framework harnesses the power of multimodal large language model (MLLM) to understand video semantics from a key frame and generate creative audio schemes, 
             which are then utilized as prompts for text-to-audio models, resulting in video-to-audio generation with natural language as an interface. 
             We show the satisfactory performance of SVA through case study and discuss the limitations along with the future research direction.
         </span>
     </div>
+<!-- 简介 -->
+    <div class="container">
+        <h2>Introduction</h2>
+        <span>
+            The overview of our proposed SVA framework is as follows. 
+            Initially, a key frame (highlighted in red) is randomly selected from the video frames. 
+            We then prompt Gemini Pro to generate a SFX and BGM scheme, which comprising three different SFX descriptions and one BGM description. 
+            Subsequently, these descriptions are inputted into AudioGen and MusicGen respectively, resulting in corresponding SFX and BGM waveform files. 
+            Then we run post-processing for noise removal and reduction. Finally, all multimodal data, including video frames, SFX waveform files, 
+            and one BGM waveform file are merged to create the video with audio. 
+        </span>
+        <img src="./img1.jpg" width="100%">
+    </div>
+
 <!--  Samples-->
     <div class="container">
     <h2>Samples</h2>
